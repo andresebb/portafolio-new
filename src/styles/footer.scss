@@ -1,5 +1,5 @@
 footer {
-  background: #0e151c;
+  background: $color-background;
   padding: 12px;
 
   .footer--by {
@@ -11,11 +11,27 @@ footer {
       font-size: 1.2rem;
       letter-spacing: 2px;
       margin: 0 6px;
+      color: $color-letra2;
     }
   }
   .redes-sociales {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 16px;
+  }
+}
+
+@media (min-width: 600px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    .redes-sociales {
+      margin-bottom: 0;
+      width: 260px;
+      display: flex;
+      justify-content: space-around;
+    }
   }
 }

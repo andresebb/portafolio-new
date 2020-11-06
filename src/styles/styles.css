@@ -92,10 +92,10 @@ body a {
   display: flex;
 }
 
-.about {
-  padding: 20px;
-}
 .about__header {
+  background-color: #15202b;
+  background-image: linear-gradient(0deg, #15202b 0%, #213a57 100%);
+  padding: 20px;
   display: grid;
   grid-template-columns: 40% 60%;
   align-items: center;
@@ -116,30 +116,40 @@ body a {
 .about__header .about__red--image img {
   width: 100%;
 }
-.about-text {
-  text-align: right;
-  font-size: 1.3rem;
+.about__header .short {
+  width: fit-content;
 }
-.about__perfil--image {
+.about__me {
+  padding: 0 20px;
+}
+.about__me .about-text {
+  text-align: left;
+  font-size: 1.3rem;
+  color: #e0e0e0;
+}
+.about__me .about__perfil--image {
   margin: 28px 0;
 }
-.about__perfil--image img {
+.about__me .about__perfil--image img {
   border-radius: 6px;
-  max-height: 200px;
+  max-width: 265px;
   margin: 0 auto;
   display: flex;
+}
+.about__skills {
+  padding: 20px;
 }
 .about__skills .skill--box {
   width: 100%;
   background: #e8e8e8;
-  border-radius: 2px;
+  border-radius: 6px;
   margin-bottom: 16px;
   height: 30px;
 }
 .about__skills .skill {
   background: #116cff;
-  border-bottom-left-radius: 2px;
-  border-top-left-radius: 2px;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
   display: flex;
   height: 100%;
 }
@@ -147,8 +157,8 @@ body a {
   width: 35px;
   background: #0058e6;
   padding: 4px;
-  border-bottom-left-radius: 2px;
-  border-top-left-radius: 2px;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
   display: flex;
   align-items: center;
 }
@@ -184,6 +194,26 @@ body a {
   width: 75%;
 }
 
+@media (min-width: 600px) {
+  .about-text {
+    width: 100%;
+  }
+  .about-text p {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 28px;
+  }
+}
+@media (min-width: 775px) {
+  .about__header {
+    grid-template-columns: 70% 30%;
+  }
+}
 .proyectos {
   padding: 20px;
 }
@@ -200,6 +230,7 @@ body a {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 .proyectos__container .proyecto--box .proyecto--puntos-container {
   display: flex;
@@ -236,7 +267,7 @@ body a {
   text-align: center;
   padding: 0.6em 0.8em 0.8em;
   border: none;
-  color: white;
+  color: #e0e0e0;
   background: #0093f0;
   margin: 5px;
   border-radius: 5px;
@@ -247,6 +278,7 @@ body a {
   text-decoration: none;
   will-change: transform;
   font-size: 1.2rem;
+  font-weight: bold;
 }
 .proyectos__container .proyecto--box .proyecto-description .btn:active {
   transform: scale(0.8);
@@ -257,9 +289,34 @@ body a {
   font-size: 1.2rem;
   color: #c1c1c1;
 }
+.proyectos__container .proyecto--box:hover .punto {
+  margin-right: 16px;
+}
 
+@media (min-width: 600px) {
+  .proyectos__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 28px;
+  }
+
+  .proyecto--box {
+    margin: 0;
+  }
+}
+@media (min-width: 900px) {
+  .proyectos__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 28px;
+  }
+
+  .proyecto--box {
+    margin: 0;
+  }
+}
 footer {
-  background: #0e151c;
+  background: #15202b;
   padding: 12px;
 }
 footer .footer--by {
@@ -272,6 +329,7 @@ footer .footer--by p {
   font-size: 1.2rem;
   letter-spacing: 2px;
   margin: 0 6px;
+  color: #c2c2c2;
 }
 footer .redes-sociales {
   display: flex;
@@ -279,7 +337,23 @@ footer .redes-sociales {
   margin-bottom: 16px;
 }
 
+@media (min-width: 600px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+  footer .redes-sociales {
+    margin-bottom: 0;
+    width: 260px;
+    display: flex;
+    justify-content: space-around;
+  }
+}
 .contacto {
+  background-color: #15202b;
+  background-image: linear-gradient(180deg, #15202b 0%, #213a57 100%);
   padding: 10px 20px;
 }
 .contacto .contacto--title {
@@ -304,8 +378,26 @@ footer .redes-sociales {
 .contacto .first {
   background: #2bc48a;
 }
+.contacto .first:hover {
+  background: #2ba979;
+}
+.contacto .second:hover {
+  background: #087dc7;
+}
 .contacto .contacto-frase {
   font-size: 1.4rem;
+}
+.contacto a {
+  letter-spacing: 2px;
+  color: #e0e0e0;
+}
+
+@media (min-width: 600px) {
+  .contacto--buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 28px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

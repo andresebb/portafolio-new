@@ -1,4 +1,7 @@
 .contacto {
+  background-color: #15202b;
+  background-image: linear-gradient(180deg, #15202b 0%, #213a57 100%);
+
   padding: 10px 20px;
   .contacto--title {
     width: fit-content;
@@ -23,8 +26,30 @@
   .first {
     background: $color-secundario;
   }
+  .first:hover {
+    background: #2ba979;
+  }
+
+  .second:hover {
+    background: #087dc7;
+  }
 
   .contacto-frase {
     font-size: 1.4rem;
+  }
+
+  a {
+    letter-spacing: 2px;
+    color: #e0e0e0;
+  }
+}
+
+@media (min-width: 600px) {
+  .contacto {
+    &--buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 28px;
+    }
   }
 }

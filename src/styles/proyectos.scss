@@ -15,6 +15,7 @@
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
       margin-bottom: 40px;
+      cursor: pointer;
 
       .proyecto--puntos-container {
         display: flex;
@@ -55,7 +56,7 @@
           text-align: center;
           padding: 0.6em 0.8em 0.8em;
           border: none;
-          color: white;
+          color: $color-letra1;
           background: #0093f0;
           margin: 5px;
           border-radius: 5px;
@@ -66,6 +67,7 @@
           text-decoration: none;
           will-change: transform;
           font-size: 1.2rem;
+          font-weight: bold;
         }
         .btn:active {
           transform: scale(0.8);
@@ -81,5 +83,33 @@
         }
       }
     }
+
+    .proyecto--box:hover {
+      .punto {
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .proyectos__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 28px;
+  }
+  .proyecto--box {
+    margin: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .proyectos__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 28px;
+  }
+  .proyecto--box {
+    margin: 0;
   }
 }

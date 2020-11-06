@@ -1,6 +1,8 @@
 .about {
-  padding: 20px;
   &__header {
+    background-color: #15202b;
+    background-image: linear-gradient(0deg, #15202b 0%, #213a57 100%);
+    padding: 20px;
     display: grid;
     grid-template-columns: 40% 60%;
     align-items: center;
@@ -22,34 +24,42 @@
         width: 100%;
       }
     }
-  }
-  &-text {
-    text-align: right;
-    font-size: 1.3rem;
-  }
-
-  &__perfil--image {
-    margin: 28px 0;
-    img {
-      border-radius: 6px;
-      max-height: 200px;
-      margin: 0 auto;
-      display: flex;
+    .short {
+      width: fit-content;
     }
   }
+  &__me {
+    padding: 0 20px;
+    .about-text {
+      text-align: left;
+      font-size: 1.3rem;
+      color: $color-letra1;
+    }
+    .about__perfil--image {
+      margin: 28px 0;
+      img {
+        border-radius: 6px;
+        max-width: 265px;
+        margin: 0 auto;
+        display: flex;
+      }
+    }
+  }
+
   &__skills {
+    padding: 20px;
     .skill--box {
       width: 100%;
       background: #e8e8e8;
-      border-radius: 2px;
+      border-radius: 6px;
       margin-bottom: 16px;
       height: 30px;
     }
 
     .skill {
       background: #116cff;
-      border-bottom-left-radius: 2px;
-      border-top-left-radius: 2px;
+      border-bottom-left-radius: 6px;
+      border-top-left-radius: 6px;
       display: flex;
       height: 100%;
     }
@@ -58,8 +68,8 @@
       width: 35px;
       background: #0058e6;
       padding: 4px;
-      border-bottom-left-radius: 2px;
-      border-top-left-radius: 2px;
+      border-bottom-left-radius: 6px;
+      border-top-left-radius: 6px;
       display: flex;
       align-items: center;
 
@@ -96,5 +106,26 @@
     .git {
       width: 75%;
     }
+  }
+}
+
+@media (min-width: 600px) {
+  .about-text {
+    width: 100%;
+    p {
+      width: 40%;
+      margin: 0 auto;
+    }
+  }
+
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 28px;
+  }
+}
+@media (min-width: 775px) {
+  .about__header {
+    grid-template-columns: 70% 30%;
   }
 }
