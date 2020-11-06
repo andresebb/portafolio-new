@@ -1,0 +1,23 @@
+.hero {
+  &__image--container {
+    img {
+      width: 100%;
+      height: 250px;
+    }
+  }
+  &__text--container {
+    .hero--title {
+      text-align: center;
+      font-size: 3rem;
+    }
+    .hero--frase {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 24px;
+    }
+    .hero--flecha {
+      margin: 0 auto;
+      display: flex;
+    }
+  }
+}
