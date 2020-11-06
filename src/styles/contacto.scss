@@ -1,0 +1,30 @@
+.contacto {
+  padding: 10px 20px;
+  .contacto--title {
+    width: fit-content;
+    h2 {
+      margin: 0;
+      margin-bottom: 6px;
+    }
+  }
+  .btn.btn-contacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 18px;
+    font-weight: bold;
+    font-size: 1.6rem;
+    img {
+      width: 30px;
+    }
+  }
+
+  .first {
+    background: $color-secundario;
+  }
+
+  .contacto-frase {
+    font-size: 1.4rem;
+  }
+}

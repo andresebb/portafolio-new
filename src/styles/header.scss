@@ -4,11 +4,11 @@
   align-items: center;
   background: #15202b;
   position: sticky;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 12px 20px;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 999;
   &__logo--container {
     img {
       width: 35px;
