@@ -1,12 +1,12 @@
 .about {
+  padding-top: 50px;
+  background: url("../images/red2.svg") no-repeat top left,
+    url("../images/red1.svg") no-repeat right,
+    url("../images/red1.svg") no-repeat left;
   &__header {
     background-color: #15202b;
     background-image: linear-gradient(0deg, #15202b 0%, #213a57 100%);
     padding: 20px;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    align-items: center;
-    grid-gap: 2rem;
     .about__title--container {
       h2 {
         margin: 0;
@@ -32,7 +32,7 @@
     padding: 0 20px;
     .about-text {
       text-align: left;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       color: $color-letra1;
     }
     .about__perfil--image {
@@ -47,6 +47,7 @@
   }
 
   &__skills {
+    background: url("../images/red1.svg") no-repeat top right;
     padding: 20px;
     .skill--box {
       width: 100%;
@@ -89,23 +90,41 @@
       margin-left: 6px;
     }
     .html {
-      width: 90%;
+      animation: html 2s forwards;
     }
     .css {
       width: 80%;
+      animation: css 2s forwards;
     }
     .javascript {
       width: 84%;
+      animation: js 2s forwards;
     }
     .react {
       width: 88%;
+      animation: react 2s forwards;
     }
     .firebase {
       width: 60%;
+      animation: firebase 2s forwards;
     }
     .git {
       width: 75%;
+      animation: git 2s forwards;
     }
+  }
+}
+
+@media (min-width: 750px) {
+  .about__header {
+    padding: 20px 86px;
+  }
+
+  .about__me {
+    padding: 0 86px;
+  }
+  .about__skills {
+    padding: 20px 86px;
   }
 }
 
@@ -127,5 +146,60 @@
 @media (min-width: 775px) {
   .about__header {
     grid-template-columns: 70% 30%;
+  }
+}
+
+@keyframes html {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+@keyframes css {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 88%;
+  }
+}
+@keyframes js {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 86%;
+  }
+}
+@keyframes react {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 92%;
+  }
+}
+@keyframes firebase {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 60%;
+  }
+}
+@keyframes git {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 82%;
   }
 }

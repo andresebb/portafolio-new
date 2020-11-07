@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chiguire Code</title>
     <link rel="stylesheet" href="./styles/styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+      integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <main>
@@ -15,19 +24,49 @@
         <div class="header__menu--container">
           <img src="./images/menu.svg" alt="" />
         </div>
+        <nav class="menu open" id="menu">
+          <ul>
+            <li>
+              <a href="#about" class="link">Sobre mi</a>
+            </li>
+            <li>
+              <a href="#proyectos" class="link">Proyectos</a>
+            </li>
+            <li>
+              <a href="#contacto" class="link">Contacto</a>
+            </li>
+          </ul>
+          <div class="menu--buttons">
+            <a href="mailto:aebb001@gmail.com" class="btn btn-contacto first"
+              >Trabajemos juntos
+              <img src="./images/gmail.svg" alt="" />
+            </a>
+            <a
+              href="https://github.com/andresebb"
+              class="btn btn-contacto second"
+              target="_blank"
+              >Ver proyectos
+              <img src="./images/github.svg" alt="" />
+            </a>
+          </div>
+        </nav>
       </header>
       <section id="hero" class="hero">
-        <div class="hero__image--container">
-          <img src="./images/nuevos.svg" alt="" />
-        </div>
-        <div class="hero__text--container">
-          <h1 class="hero--title">Bienvenido, Yo soy Andres Betancourt</h1>
-          <div >
-            <p class="hero--frase">
-              "Incluso si fallas, terminaras haciendo algo genial en el proceso"
-            </p>
-            <img class="hero--flecha" src="./images/down-arrow.svg" alt="" />
+        <div class="prueba">
+          <div class="hero__image--container">
+            <img src="./images/nuevos.svg" alt="" />
           </div>
+          <div class="hero__text--container">
+            <h1 class="hero--title">Bienvenido, Yo soy Andres Betancourt</h1>
+            <div>
+              <p class="hero--frase">
+                "Incluso si fallas, terminaras haciendo algo genial en el
+                proceso"
+              </p>
+              <img class="hero--flecha" src="./images/down-arrow.svg" alt="" />
+            </div>
+          </div>
+        </div>
       </section>
       <section id="about" class="about">
         <div class="about__header">
@@ -37,17 +76,17 @@
               <div class="subrayado"></div>
             </div>
           </div>
-          <div class="about__red--image">
-            <img src="./images/red1.svg" alt="" />
-          </div>
         </div>
         <div class="about__me">
           <div class="about__perfil--image">
-            <img src="./images/tech.png" alt="" />
+            <img src="https://i.ibb.co/746KKTN/tech.png" alt="" />
           </div>
           <div class="about-text">
             <p>
-              Soy un <span>Frontend Developer</span> con gran pasion por la tecnologia y el emprendimiento. Me gusta estar en constante evolucion y aprender cosas nuevas todas los dias para asi mejorar mis habilidades, soy fan de react y javascript 🖐.
+              Soy un <span>Frontend Developer</span> con gran pasion por la
+              tecnologia y el emprendimiento. Me gusta estar en constante
+              evolucion y aprender cosas nuevas todas los dias para asi mejorar
+              mis habilidades, soy fan de react y javascript 🖐.
             </p>
           </div>
         </div>
@@ -55,49 +94,49 @@
           <h3>Skills</h3>
           <div class="skills">
             <div class="skill--box">
-              <div class="skill html">
-                <div class="skill--image"> 
-                  <img src="./images/html.svg" alt="">
+              <div class="skill wow html">
+                <div class="skill--image">
+                  <img src="./images/html.svg" alt="" />
                 </div>
                 <p class="skill--name">Html</p>
               </div>
             </div>
-            <div class="skill--box">
-              <div class="skill css">
-                <div class="skill--image"> 
-                  <img src="./images/css.svg" alt="">
+            <div class="skill--box wow">
+              <div class="skill wow css">
+                <div class="skill--image">
+                  <img src="./images/css.svg" alt="" />
                 </div>
                 <p class="skill--name">Css</p>
               </div>
             </div>
             <div class="skill--box">
-              <div class="skill javascript">
-                <div class="skill--image"> 
-                  <img src="./images/javascript.svg" alt="">
+              <div class="skill wow javascript">
+                <div class="skill--image">
+                  <img src="./images/javascript.svg" alt="" />
                 </div>
                 <p class="skill--name">Javascript</p>
               </div>
             </div>
             <div class="skill--box">
-              <div class="skill react">
-                <div class="skill--image"> 
-                  <img src="./images/react.svg" alt="">
+              <div class="skill wow react">
+                <div class="skill--image">
+                  <img src="./images/react.svg" alt="" />
                 </div>
                 <p class="skill--name">React</p>
               </div>
             </div>
             <div class="skill--box">
-              <div class="skill firebase">
-                <div class="skill--image"> 
-                  <img src="./images/firebase.svg" alt="">
+              <div class="skill wow firebase">
+                <div class="skill--image">
+                  <img src="./images/firebase.svg" alt="" />
                 </div>
                 <p class="skill--name">Firebase</p>
               </div>
             </div>
             <div class="skill--box">
-              <div class="skill git">
-                <div class="skill--image"> 
-                  <img src="./images/git.svg" alt="">
+              <div class="skill wow git">
+                <div class="skill--image">
+                  <img src="./images/git.svg" alt="" />
                 </div>
                 <p class="skill--name">Git</p>
               </div>
@@ -118,27 +157,34 @@
               <div class="punto tres"></div>
             </div>
             <div class="proyecto--imagen uno">
-              <img src="./images/woorki.png" alt="">
+              <img src="https://i.ibb.co/r3HGNhF/woorki.png" alt="" />
             </div>
-            <div class="proyecto-description ">
-              <a href="https://woorki-ve.web.app/" target="_blank" class="btn">Ver sitio Web</a>
+            <div class="proyecto-description">
+              <a href="https://woorki-ve.web.app/" target="_blank" class="btn"
+                >Ver sitio Web</a
+              >
               <div class="proyecto-tecnologies">
                 <span>Firebase</span>
                 <span>React</span>
               </div>
             </div>
           </div>
-          <div class="proyecto--box ">
+          <div class="proyecto--box">
             <div class="proyecto--puntos-container">
               <div class="punto uno"></div>
               <div class="punto dos"></div>
               <div class="punto tres"></div>
             </div>
             <div class="proyecto--imagen dos">
-              <img src="./images/podcast.png" alt="">
+              <img src="https://i.ibb.co/cxLtNdc/podcast.png" alt="" />
             </div>
-            <div class="proyecto-description ">
-              <a href="https://podcast-azure.vercel.app/" target="_blank" class="btn">Ver sitio Web</a>
+            <div class="proyecto-description">
+              <a
+                href="https://podcast-azure.vercel.app/"
+                target="_blank"
+                class="btn"
+                >Ver sitio Web</a
+              >
               <div class="proyecto-tecnologies">
                 <span>Next</span>
                 <span>React</span>
@@ -152,10 +198,15 @@
               <div class="punto tres"></div>
             </div>
             <div class="proyecto--imagen tres">
-              <img src="./images/petgram.png" alt="">
+              <img src="https://i.ibb.co/0KK99kF/petgram.png" alt="" />
             </div>
             <div class="proyecto-description">
-              <a href="https://petgram.andresebb.vercel.app/" target="_blank" class="btn">Ver sitio Web</a>
+              <a
+                href="https://petgram.andresebb.vercel.app/"
+                target="_blank"
+                class="btn"
+                >Ver sitio Web</a
+              >
               <div class="proyecto-tecnologies">
                 <span>React</span>
                 <span>Graphql</span>
@@ -169,10 +220,15 @@
               <div class="punto tres"></div>
             </div>
             <div class="proyecto--imagen cuatro">
-              <img src="./images/mrburger.png" alt="">
+              <img src="https://i.ibb.co/fMQYXww/mrburger.png" alt="" />
             </div>
             <div class="proyecto-description">
-              <a href="https://mrburger.netlify.app/" target="_blank" class="btn">Ver sitio Web</a>
+              <a
+                href="https://mrburger.netlify.app/"
+                target="_blank"
+                class="btn"
+                >Ver sitio Web</a
+              >
               <div class="proyecto-tecnologies">
                 <span>React</span>
                 <span>Stripe</span>
@@ -186,13 +242,39 @@
               <div class="punto tres"></div>
             </div>
             <div class="proyecto--imagen cuatro">
-              <img src="./images/flags.png" alt="">
+              <img src="https://i.ibb.co/bJ1dGXv/flags.png" alt="" />
             </div>
             <div class="proyecto-description">
-              <a href="https://andresebb.github.io/flags/" target="_blank" class="btn">Ver sitio Web</a>
+              <a
+                href="https://andresebb.github.io/flags/"
+                target="_blank"
+                class="btn"
+                >Ver sitio Web</a
+              >
               <div class="proyecto-tecnologies">
                 <span>React</span>
                 <span>Redux</span>
+              </div>
+            </div>
+          </div>
+          <div class="proyecto--box">
+            <div class="proyecto--puntos-container">
+              <div class="punto uno"></div>
+              <div class="punto dos"></div>
+              <div class="punto tres"></div>
+            </div>
+            <div class="proyecto--imagen cinco">
+              <img src="https://i.ibb.co/mqRk1rc/juego.png" alt="" />
+            </div>
+            <div class="proyecto-description">
+              <a
+                href="https://andresebb.github.io/piedra-papel-tijeras/"
+                target="_blank"
+                class="btn"
+                >Ver sitio Web</a
+              >
+              <div class="proyecto-tecnologies">
+                <span>React</span>
               </div>
             </div>
           </div>
@@ -201,40 +283,44 @@
       <section id="contacto" class="contacto">
         <div class="contacto--title">
           <h2>Contacto</h2>
-          <div class="subrayado">
-        </div>
+          <div class="subrayado"></div>
         </div>
         <p class="contacto-frase">¿Tienes alguna idea?</p>
         <div class="contacto--buttons">
-          <a href="mailto:aebb001@gmail.com" class="btn btn-contacto first" >Trabajemos juntos
-            <img src="./images/gmail.svg" alt="">
+          <a href="mailto:aebb001@gmail.com" class="btn btn-contacto first"
+            >Trabajemos juntos
+            <img src="./images/gmail.svg" alt="" />
           </a>
-          <a href="https://github.com/andresebb" class="btn btn-contacto second" target="_blank">Ver mas proyectos
-            <img src="./images/github.svg" alt="">
+          <a
+            href="https://github.com/andresebb"
+            class="btn btn-contacto second"
+            target="_blank"
+            >Ver mas proyectos
+            <img src="./images/github.svg" alt="" />
           </a>
         </div>
-
       </section>
-      
     </main>
     <footer>
-      
-      
       <div class="redes-sociales">
         <a href="https://twitter.com/chiguirecode" target="_blank">
-          <img src="./images/twitter.svg " alt="twitter">
+          <img src="./images/twitter.svg " alt="twitter" />
         </a>
         <a href="https://github.com/andresebb" target="_blank">
-          <img src="./images/github.svg" alt="github">
+          <img src="./images/github.svg" alt="github" />
         </a>
         <a href="https://www.instagram.com/andresebb/" target="_blank">
-          <img src="./images/instagram.svg" alt="instagram">
+          <img src="./images/instagram.svg" alt="instagram" />
         </a>
       </div>
       <div class="footer--by">
-        <img src="./images/logo.svg" alt="">
+        <img src="./images/logo.svg" alt="" />
         <p>@Chiguirecode</p>
       </div>
     </footer>
+    <script>
+      new WOW().init();
+    </script>
+    <script src="index.js"></script>
   </body>
 </html>

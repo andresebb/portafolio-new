@@ -3,6 +3,13 @@ $color-principal: #116cff;
 $color-secundario: #2bc48a;
 $color-letra1: #e0e0e0;
 $color-letra2: #c2c2c2;
+
+$width-html: 90%;
+$width-css: 80%;
+$width-js: 90%;
+$width-react: 90%;
+$width-firebase: 60%;
+$width-git: 80%;
 html {
   font-size: 62%;
 }
@@ -24,6 +31,7 @@ body {
   }
   a {
     text-decoration: none;
+    color: white;
   }
 }
 
@@ -44,11 +52,54 @@ body {
   font-size: 1.2rem;
 }
 .btn:active {
-  transform: scale(0.8);
+  transform: scale(0.9);
 }
 
 .subrayado {
   width: 20%;
   background: $color-secundario;
   height: 3px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  line-height: none;
+}
+
+.btn.btn-contacto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 18px;
+  font-weight: bold;
+  font-size: 1.6rem;
+  img {
+    width: 30px;
+  }
+}
+
+.first {
+  background: $color-secundario;
+}
+.first:hover {
+  background: #2ba979;
+}
+
+.second:hover {
+  background: #087dc7;
+}
+
+.contacto-frase {
+  font-size: 1.4rem;
+}
+
+@media (min-width: 750px) {
+  html {
+    font-size: 70%;
+  }
 }

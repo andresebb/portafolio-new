@@ -1,5 +1,12 @@
 .hero {
   padding: 20px;
+  display: flex;
+  height: 80vh;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: url("../images/red1.svg") no-repeat bottom right,
+    url("../images/red2.svg") no-repeat top left;
   &__image--container {
     img {
       width: 100%;
@@ -13,12 +20,39 @@
     }
     .hero--frase {
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      color: $color-letra2;
       margin-bottom: 24px;
     }
     .hero--flecha {
       margin: 0 auto;
       display: flex;
+      position: absolute;
+      width: 20px;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      animation-name: subeBaja;
+      animation-duration: 0.5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: ease-out;
     }
+  }
+}
+
+@keyframes subeBaja {
+  0% {
+    bottom: 0;
+  }
+
+  100% {
+    bottom: 4px;
+  }
+}
+
+@media (min-width: 750px) {
+  .hero {
+    padding: 20px 86px;
   }
 }

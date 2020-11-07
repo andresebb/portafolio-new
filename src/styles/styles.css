@@ -19,6 +19,7 @@ body h3 {
 }
 body a {
   text-decoration: none;
+  color: white;
 }
 
 .btn {
@@ -39,7 +40,7 @@ body a {
 }
 
 .btn:active {
-  transform: scale(0.8);
+  transform: scale(0.9);
 }
 
 .subrayado {
@@ -48,6 +49,49 @@ body a {
   height: 3px;
 }
 
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  line-height: none;
+}
+
+.btn.btn-contacto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 18px;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+.btn.btn-contacto img {
+  width: 30px;
+}
+
+.first {
+  background: #2bc48a;
+}
+
+.first:hover {
+  background: #2ba979;
+}
+
+.second:hover {
+  background: #087dc7;
+}
+
+.contacto-frase {
+  font-size: 1.4rem;
+}
+
+@media (min-width: 750px) {
+  html {
+    font-size: 70%;
+  }
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -63,16 +107,69 @@ body a {
 .header__logo--container img {
   width: 35px;
   opacity: 0.9;
+  position: relative;
+  z-index: 999;
 }
 .header__menu--container {
   cursor: pointer;
 }
 .header__menu--container img {
   width: 34px;
+  position: relative;
+  z-index: 999;
+}
+.header .menu {
+  background: #203853;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 10px;
+  transition: 1s;
+  opacity: 1;
+}
+.header .menu ul {
+  margin-top: 6vh;
+  text-align: center;
+}
+.header .menu ul li {
+  font-size: 1.8rem;
+  margin: 12px 0px;
+  font-weight: bold;
+}
+.header .menu ul img {
+  width: 22px;
+}
+.header .menu .menu--buttons {
+  display: grid;
+}
+.header .menu .menu--buttons img {
+  width: 22px;
 }
 
+.open {
+  display: none;
+  transition: 2s;
+}
+
+@media (min-width: 750px) {
+  .menu--buttons {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 28px;
+  }
+
+  .header {
+    padding: 12px 86px;
+  }
+}
 .hero {
   padding: 20px;
+  display: flex;
+  height: 80vh;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: url("../images/red1.svg") no-repeat bottom right, url("../images/red2.svg") no-repeat top left;
 }
 .hero__image--container img {
   width: 100%;
@@ -84,22 +181,46 @@ body a {
 }
 .hero__text--container .hero--frase {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  color: #c2c2c2;
   margin-bottom: 24px;
 }
 .hero__text--container .hero--flecha {
   margin: 0 auto;
   display: flex;
+  position: absolute;
+  width: 20px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  animation-name: subeBaja;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
 }
 
+@keyframes subeBaja {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 4px;
+  }
+}
+@media (min-width: 750px) {
+  .hero {
+    padding: 20px 86px;
+  }
+}
+.about {
+  padding-top: 50px;
+  background: url("../images/red2.svg") no-repeat top left, url("../images/red1.svg") no-repeat right, url("../images/red1.svg") no-repeat left;
+}
 .about__header {
   background-color: #15202b;
   background-image: linear-gradient(0deg, #15202b 0%, #213a57 100%);
   padding: 20px;
-  display: grid;
-  grid-template-columns: 40% 60%;
-  align-items: center;
-  grid-gap: 2rem;
 }
 .about__header .about__title--container h2 {
   margin: 0;
@@ -124,7 +245,7 @@ body a {
 }
 .about__me .about-text {
   text-align: left;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #e0e0e0;
 }
 .about__me .about__perfil--image {
@@ -137,6 +258,7 @@ body a {
   display: flex;
 }
 .about__skills {
+  background: url("../images/red1.svg") no-repeat top right;
   padding: 20px;
 }
 .about__skills .skill--box {
@@ -176,24 +298,42 @@ body a {
   margin-left: 6px;
 }
 .about__skills .html {
-  width: 90%;
+  animation: html 2s forwards;
 }
 .about__skills .css {
   width: 80%;
+  animation: css 2s forwards;
 }
 .about__skills .javascript {
   width: 84%;
+  animation: js 2s forwards;
 }
 .about__skills .react {
   width: 88%;
+  animation: react 2s forwards;
 }
 .about__skills .firebase {
   width: 60%;
+  animation: firebase 2s forwards;
 }
 .about__skills .git {
   width: 75%;
+  animation: git 2s forwards;
 }
 
+@media (min-width: 750px) {
+  .about__header {
+    padding: 20px 86px;
+  }
+
+  .about__me {
+    padding: 0 86px;
+  }
+
+  .about__skills {
+    padding: 20px 86px;
+  }
+}
 @media (min-width: 600px) {
   .about-text {
     width: 100%;
@@ -214,8 +354,57 @@ body a {
     grid-template-columns: 70% 30%;
   }
 }
+@keyframes html {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes css {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 88%;
+  }
+}
+@keyframes js {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 86%;
+  }
+}
+@keyframes react {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 92%;
+  }
+}
+@keyframes firebase {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60%;
+  }
+}
+@keyframes git {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 82%;
+  }
+}
 .proyectos {
   padding: 20px;
+  padding-top: 50px;
 }
 .proyectos .proyecto--title {
   width: fit-content;
@@ -230,7 +419,6 @@ body a {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   margin-bottom: 40px;
-  cursor: pointer;
 }
 .proyectos__container .proyecto--box .proyecto--puntos-container {
   display: flex;
@@ -244,6 +432,7 @@ body a {
   width: 10px;
   border-radius: 100%;
   margin-right: 8px;
+  transition: 0.5s;
 }
 .proyectos__container .proyecto--box .proyecto--puntos-container .uno {
   background: #bf5331;
@@ -302,6 +491,11 @@ body a {
 
   .proyecto--box {
     margin: 0;
+  }
+}
+@media (min-width: 750px) {
+  .proyectos {
+    padding: 50px 86px;
   }
 }
 @media (min-width: 900px) {
@@ -397,6 +591,11 @@ footer .redes-sociales {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 28px;
+  }
+}
+@media (min-width: 750px) {
+  .contacto {
+    padding: 10px 86px;
   }
 }
 

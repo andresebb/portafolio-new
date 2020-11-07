@@ -1,5 +1,6 @@
 .proyectos {
   padding: 20px;
+  padding-top: 50px;
   .proyecto--title {
     width: fit-content;
     margin-bottom: 24px;
@@ -15,7 +16,6 @@
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
       margin-bottom: 40px;
-      cursor: pointer;
 
       .proyecto--puntos-container {
         display: flex;
@@ -28,6 +28,7 @@
           width: 10px;
           border-radius: 100%;
           margin-right: 8px;
+          transition: 0.5s;
         }
 
         .uno {
@@ -100,6 +101,12 @@
   }
   .proyecto--box {
     margin: 0;
+  }
+}
+
+@media (min-width: 750px) {
+  .proyectos {
+    padding: 50px 86px;
   }
 }
 

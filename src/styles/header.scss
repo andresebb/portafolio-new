@@ -13,12 +13,61 @@
     img {
       width: 35px;
       opacity: 0.9;
+      position: relative;
+      z-index: 999;
     }
   }
   &__menu--container {
     cursor: pointer;
     img {
       width: 34px;
+      position: relative;
+      z-index: 999;
     }
+  }
+
+  .menu {
+    background: #203853;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 10px;
+    transition: 1s;
+    opacity: 1;
+    ul {
+      margin-top: 6vh;
+      text-align: center;
+      li {
+        font-size: 1.8rem;
+        margin: 12px 0px;
+        font-weight: bold;
+      }
+      img {
+        width: 22px;
+      }
+    }
+    .menu--buttons {
+      display: grid;
+
+      img {
+        width: 22px;
+      }
+    }
+  }
+}
+
+.open {
+  display: none;
+  transition: 2s;
+}
+
+@media (min-width: 750px) {
+  .menu--buttons {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 28px;
+  }
+  .header {
+    padding: 12px 86px;
   }
 }
