@@ -122,12 +122,13 @@ li {
 .header .menu {
   background: #203853;
   position: fixed;
-  top: 0;
+  top: -30vh;
   right: 0;
   left: 0;
   padding: 10px;
   transition: 1s;
   opacity: 1;
+  display: block;
 }
 .header .menu ul {
   margin-top: 6vh;
@@ -150,10 +151,6 @@ li {
 
 .open {
   display: none;
-}
-
-.animate {
-  transition: 2s;
 }
 
 @media (min-width: 750px) {
