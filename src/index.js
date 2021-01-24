@@ -1,3 +1,12 @@
+const body = document.getElementById("body");
+const loader = document.getElementById("loader");
+
+window.onload = function () {
+  body.classList.remove("hidden");
+  loader.remove();
+  console.log("se cargo");
+};
+
 const burgerMenuLogo = document.querySelector(".header__menu--container");
 const menu = document.getElementById("menu");
 
