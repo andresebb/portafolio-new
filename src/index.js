@@ -1,5 +1,8 @@
 const body = document.getElementById("body");
 const loader = document.getElementById("loader");
+const objetoAObservar = document.getElementById("interseption");
+
+console.log(objetoAObservar);
 
 window.onload = function () {
   body.classList.remove("hidden");
@@ -28,3 +31,15 @@ boton.forEach((btn) => {
 });
 
 burgerMenuLogo.addEventListener("click", openMenu);
+
+const observer = new IntersectionObserver(observadora, {
+  threshold: 0.5,
+});
+
+observer.observe(objetoAObservar);
+
+function observadora(entries) {
+  const entry = entries[0];
+  console.log(entry);
+  console.log(entry.intersectionRect);
+}

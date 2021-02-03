@@ -88,7 +88,7 @@
       font-size: 1.3rem;
       display: flex;
       align-items: center;
-      margin-left: 6px;
+      margin: 0 auto;
     }
     .html {
       animation: html 2s forwards;
@@ -156,7 +156,7 @@
   }
 
   100% {
-    width: 96%;
+    width: 100%;
   }
 }
 @keyframes css {
@@ -165,7 +165,7 @@
   }
 
   100% {
-    width: 95%;
+    width: 100%;
   }
 }
 @keyframes js {
@@ -174,7 +174,7 @@
   }
 
   100% {
-    width: 93%;
+    width: 100%;
   }
 }
 @keyframes react {
@@ -183,7 +183,7 @@
   }
 
   100% {
-    width: 94%;
+    width: 100%;
   }
 }
 @keyframes firebase {
@@ -192,7 +192,7 @@
   }
 
   100% {
-    width: 70%;
+    width: 100%;
   }
 }
 @keyframes git {
@@ -201,6 +201,14 @@
   }
 
   100% {
-    width: 90%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 950px) {
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0 28px;
   }
 }

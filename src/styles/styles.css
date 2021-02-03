@@ -1,6 +1,6 @@
 html {
   font-size: 62%;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 body {
@@ -279,6 +279,30 @@ li {
     padding: 12px 86px;
   }
 }
+@media (min-width: 850px) {
+  .header__menu--container {
+    display: none;
+  }
+
+  .header .menu {
+    background: none;
+    padding: 0;
+    position: initial;
+    display: block;
+  }
+  .header .menu ul {
+    margin-top: 0;
+    display: flex;
+    margin-bottom: 0;
+  }
+  .header .menu ul li {
+    margin-right: 36px;
+    font-weight: 400;
+  }
+  .header .menu ul .especial {
+    margin-right: 0;
+  }
+}
 .hero {
   padding: 20px;
   display: flex;
@@ -413,7 +437,7 @@ li {
   font-size: 1.3rem;
   display: flex;
   align-items: center;
-  margin-left: 6px;
+  margin: 0 auto;
 }
 .about__skills .html {
   animation: html 2s forwards;
@@ -477,7 +501,7 @@ li {
     width: 0;
   }
   100% {
-    width: 96%;
+    width: 100%;
   }
 }
 @keyframes css {
@@ -485,7 +509,7 @@ li {
     width: 0;
   }
   100% {
-    width: 95%;
+    width: 100%;
   }
 }
 @keyframes js {
@@ -493,7 +517,7 @@ li {
     width: 0;
   }
   100% {
-    width: 93%;
+    width: 100%;
   }
 }
 @keyframes react {
@@ -501,7 +525,7 @@ li {
     width: 0;
   }
   100% {
-    width: 94%;
+    width: 100%;
   }
 }
 @keyframes firebase {
@@ -509,7 +533,7 @@ li {
     width: 0;
   }
   100% {
-    width: 70%;
+    width: 100%;
   }
 }
 @keyframes git {
@@ -517,7 +541,14 @@ li {
     width: 0;
   }
   100% {
-    width: 90%;
+    width: 100%;
+  }
+}
+@media (min-width: 950px) {
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0 28px;
   }
 }
 .proyectos {

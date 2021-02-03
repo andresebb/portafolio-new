@@ -71,3 +71,31 @@
     padding: 12px 86px;
   }
 }
+
+@media (min-width: 850px) {
+  .header__menu--container {
+    display: none;
+  }
+
+  .header {
+    .menu {
+      background: none;
+      padding: 0;
+      position: initial;
+      display: block;
+      ul {
+        margin-top: 0;
+        display: flex;
+        margin-bottom: 0;
+        li {
+          margin-right: 36px;
+          font-weight: 400;
+        }
+
+        .especial {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
