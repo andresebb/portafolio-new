@@ -1,13 +1,11 @@
 const body = document.getElementById("body");
 const loader = document.getElementById("loader");
-const objetoAObservar = document.getElementById("interseption");
-
-console.log(objetoAObservar);
+const header = document.querySelector(".header");
+const ObjetoAObsever = document.querySelector(".about__header");
 
 window.onload = function () {
   body.classList.remove("hidden");
   loader.remove();
-  console.log("se cargo");
 };
 
 const burgerMenuLogo = document.querySelector(".header__menu--container");
@@ -32,14 +30,25 @@ boton.forEach((btn) => {
 
 burgerMenuLogo.addEventListener("click", openMenu);
 
-const observer = new IntersectionObserver(observadora, {
-  threshold: 0.5,
+const observer = new IntersectionObserver(callback, {
+  // threshold: 0,
 });
 
-observer.observe(objetoAObservar);
+observer.observe(ObjetoAObsever);
+let visibility;
 
-function observadora(entries) {
+function callback(entries) {
   const entry = entries[0];
-  console.log(entry);
-  console.log(entry.intersectionRect);
+  visibility = entry.isIntersecting;
 }
+
+window.addEventListener("scroll", () => {
+  const top = window.scrollY;
+
+  if (top > 700 && visibility === false) {
+    header.style.background =
+      "linear-gradient(0deg, #15202b 20%, #213a57 100%)";
+  } else {
+    header.style.background = "#15202b";
+  }
+});
